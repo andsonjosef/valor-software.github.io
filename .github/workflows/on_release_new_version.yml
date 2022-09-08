@@ -93,7 +93,7 @@ jobs:
           version: "latest"
           file: "webapp.zip"
           target: "webapp.zip"
-          token: ${{ secrets.GITHUB_PAT }}
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: create dist directory
         run: mkdir -p dist/webapp
