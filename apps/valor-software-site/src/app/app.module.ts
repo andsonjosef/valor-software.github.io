@@ -8,12 +8,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ScullyLibModule } from '@scullyio/ng-lib';
 import { articleIdList } from "../assets/blog/articles.list";
 import { PORTFOLIO_LIST } from "@valor-software/portfolio";
-import { projectsList } from "../assets/portfolio/portfolio.list";
-import { linksFromOldSite } from "../assets/blog/brokenRoutes";
+import { portfolioList } from "../assets/portfolio/portfolio.list";
+import { NotFoundComponent } from './404.component';
 
 @NgModule({
   declarations: [
-      AppComponent
+      AppComponent,
+      NotFoundComponent
   ],
   imports: [
     BrowserModule,
