@@ -3,13 +3,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { routes } from './app.routing';
 import { AppComponent } from './app.component';
-import {CommonDocsModule, ARTICLES_LIST, SeoService} from '@valor-software/common-docs';
+import { CommonDocsModule, ARTICLES_LIST, SeoService, OLD_ROUTES_FROM_OLD_SITE } from '@valor-software/common-docs';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ScullyLibModule } from '@scullyio/ng-lib';
-import { articlesList } from "../assets/blog/articles.list";
+import { articleIdList } from "../assets/blog/articles.list";
 import { PORTFOLIO_LIST } from "@valor-software/portfolio";
 import { portfolioList } from "../assets/portfolio/portfolio.list";
 import { NotFoundComponent } from './404.component';
+import { projectsList } from "../assets/portfolio/portfolio.list";
+import { linksFromOldSite } from "../assets/blog/brokenRoutes";
 
 @NgModule({
   declarations: [
@@ -25,8 +27,9 @@ import { NotFoundComponent } from './404.component';
   ],
   providers: [
     SeoService,
-    { provide: ARTICLES_LIST, useValue: articlesList },
-    { provide: PORTFOLIO_LIST, useValue: portfolioList },
+    { provide: ARTICLES_LIST, useValue: articleIdList },
+    { provide: PORTFOLIO_LIST, useValue: projectsList },
+    { provide: OLD_ROUTES_FROM_OLD_SITE, useValue: linksFromOldSite },
   ],
   bootstrap: [AppComponent],
 })
