@@ -21,11 +21,7 @@ setPluginConfig(SitemapPlugin, {
     ],
     ignoredRoutes: ['/404'],
     routes: {
-        '/articles/:id': {
-            changeFreq: 'daily',
-            priority: '0.9',
-            sitemapFilename: 'sitemap-articles.xml',
-        },
+        
         '/projects/:id': {
             changeFreq: 'daily',
             priority: '0.9',
